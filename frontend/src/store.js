@@ -20,8 +20,16 @@ const cartItemsFromLocalStorage = localStorage.getItem("cartItems")
   ? JSON.parse(localStorage.getItem("cartItems"))
   : [];
 
+//IF THERE IS A SHIPPING ADDRESS SAVED IN LS USE THAT, IF NOT JUST LOAD AN EMPTY OBJ
+const shippingAddressFromStorage = localStorage.getItem("shippingAddress")
+  ? JSON.parse(localStorage.getItem("shippingAddress"))
+  : {};
+
 const initialState = {
-  cart: { cartItems: cartItemsFromLocalStorage },
+  cart: {
+    cartItems: cartItemsFromLocalStorage,
+    shippingAddress: shippingAddressFromStorage,
+  },
 };
 const middleware = [thunk];
 const store = createStore(

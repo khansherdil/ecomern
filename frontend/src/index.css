@@ -5,3 +5,31 @@ main {
 .rating span {
   margin: 0.1rem;
 }
+
+.form__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form__container > h2 {
+  text-align: center;
+}
+
+.form__container > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__container > form > input {
+  width: 300px;
+  padding: 0.3rem 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.form__container > form > button {
+  border: none;
+  padding: 0.5rem;
+  background-color: #353535;
+  color: white;
+}

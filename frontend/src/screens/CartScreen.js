@@ -23,7 +23,7 @@ const CartScreen = ({ match, location, history }) => {
   };
 
   const handleCheckout = () => {
-    history.push("/login");
+    history.push("/order");
   };
   return (
     <Row>
