@@ -9,7 +9,7 @@ import OrderScreen from "./screens/OrderScreen";
 
 import { Container } from "react-bootstrap";
 import Payment from "./components/Payment";
-import Syke from "./components/Syke";
+import End from "./components/End";
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
           <Container>
             <Route path="/payment" component={Payment}></Route>
             <Route path="/order" component={OrderScreen}></Route>
-            <Route path="/syke" component={Syke}></Route>
+            <Route path="/end" component={End}></Route>
             <Route path="/" component={HomeScreen} exact></Route>
             <Route path="/product/:id" component={ProductScreen}></Route>
             <Route path="/cart/:id?" component={CartScreen}></Route>

@@ -12,6 +12,11 @@ const Payment = ({ history }) => {
     (acc, item) => acc + item.price * item.qty,
     0
   );
+
+  const handleRedirect = () => {
+    localStorage.removeItem("cartItems");
+    history.push("/end");
+  };
   return (
     <div style={{ width: "1000px", marginLeft: "auto", marginRight: "auto" }}>
       <Row>
@@ -27,9 +32,7 @@ const Payment = ({ history }) => {
               <p>Country: {cart.shippingAddress.country}</p>
               <p>City: {cart.shippingAddress.city}</p>
             </ListGroup.Item>
-            <Button onClick={() => history.push("/syke")}>
-              Complete order
-            </Button>
+            <Button onClick={handleRedirect}>Complete order</Button>
           </ListGroup>
         </Col>
         <Col md={6}>
